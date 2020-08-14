@@ -9,7 +9,6 @@ class App extends Component {
   }
 
   getGallery = () => {
-
     axios.get('/gallery')
       .then((response) => {
         console.log(response.data);
