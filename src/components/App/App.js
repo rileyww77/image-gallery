@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList.js'
 
 class App extends Component {
 
@@ -8,6 +9,12 @@ class App extends Component {
     myPictures: []
   }
 
+  //get images on page load
+  componentDidMount(){
+    this.getGallery();
+  }
+
+//GET request
   getGallery = () => {
     axios.get('/gallery')
       .then((response) => {
@@ -21,6 +28,7 @@ class App extends Component {
 
   }
 
+//render the page
   render() {
     return (
       <div className="App">
@@ -28,8 +36,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg" />
+        <GalleryList myPictures={this.state.myPictures}/>
       </div>
     );
   }
