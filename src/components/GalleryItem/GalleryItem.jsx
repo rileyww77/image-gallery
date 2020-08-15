@@ -2,22 +2,15 @@ import React, { Component } from 'react';
 
 class GalleryItem extends Component {
 
-    state = {
-        likesCount: 0
-    }
-
-    likeButton = () => {
-        this.setState({
-            likesCount: this.state.likesCount + 1
-        })
-    }
+    
 
     render() {
         return (
             <>
                 <p>{this.props.picture.path}</p>
-                <button onClick={this.likeButton}>like!</button>
-                {this.state.likesCount}
+                <button onClick={(event) => this.props.addLike(this.props.picture.id)}>like!</button>
+                {this.props.picture.likes}
+                
             </>
         )
     }

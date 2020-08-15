@@ -6,7 +6,8 @@ import GalleryList from '../GalleryList/GalleryList.js'
 class App extends Component {
 
   state = {
-    myPictures: []
+    myPictures: [],
+    
   }
 
   //get images on page load
@@ -28,6 +29,17 @@ class App extends Component {
 
   }
 
+  //PUT request
+  addLikes = (id) => {
+    axios.put(`/gallery/like/${id}`, this.state.myPictures)
+    .then((response) =>{
+      console.log(response.data)
+      this.getGallery();
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
 //render the page
   render() {
     return (
@@ -36,7 +48,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <GalleryList myPictures={this.state.myPictures}/>
+        <GalleryList myPictures={this.state.myPictures} addLike={this.addLikes}/>
       </div>
     );
   }
