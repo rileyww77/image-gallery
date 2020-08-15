@@ -1,0 +1,30 @@
+.image {
+  
+    width: 30%;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.buttonDiv {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+    width: 5%;
+}
+
+.description{
+    border: 1px solid black;
+    height: 325px;
+    width: 300px;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+p{
+    float: left;
+}

@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
 class GalleryList extends Component {
-   
-   
-    render(){
+
+
+    render() {
         console.log(this.props.myPictures)
-        return(
+        return (
             <>
-                <p>hi from list!</p>
                 {this.props.myPictures.map((picture) => {
-                    return(
+                    return (
                         <GalleryItem key={picture.id}
-                        picture={picture}
-                        addLike={this.props.addLike}/>
+                            picture={picture}
+                            addLike={this.props.addLike} />
                     )
                 })}
-                </>
+            </>
         )
     }
 }
