@@ -1,9 +1,10 @@
-.image {
-  
+
+.image { 
     width: 30%;
     float: left;
     margin-bottom: 20px;
     margin-left: 50px;
+    flex-direction: row;
 }
 
 .buttonDiv {
@@ -26,6 +27,3 @@
     padding-top: 75px;
 }
 
-p{
-    float: left;
-}
