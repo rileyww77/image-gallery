@@ -1,9 +1,7 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+My Life Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This application is able to pull a list of images from an array and display them on the DOM. When clicked, the images will instead show a description of the image. If clicked again, the image will replace the description, so on and so forth. There is the ability to "like" each picture, with a like counter the updates in real time next to it. The main struggle of this project was with the CSS, and getting everything to format correctly with all the different moving parts.
